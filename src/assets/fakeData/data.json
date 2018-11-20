@@ -1,0 +1,68 @@
+{
+    "data": [
+        {
+            "Date": "1-12",
+            "DayType": "rest day",
+            "Attendance": "Leave",
+            "WorkHours": "0",
+            "LateAmmount": "0",
+            "year": 2018
+        },
+        {
+            "Date": "2-12",
+            "DayType": "rest day",
+            "Attendance": "Leave",
+            "WorkHours": "07:30",
+            "LateAmmount": "0:14",
+            "year": 2018
+        },
+        {
+            "Date": "3-12",
+            "DayType": "work day",
+            "Attendance": "Presence",
+            "WorkHours": "07:12",
+            "LateAmmount": "0:14",
+            "year": 2018
+        },
+        {
+            "Date": "4-12",
+            "DayType": "work day",
+            "Attendance": "Presence",
+            "WorkHours": "07:12",
+            "LateAmmount": "0:14",
+            "year": 2018
+        },
+        {
+            "Date": "5-12",
+            "DayType": "work day",
+            "Attendance": "Presence",
+            "WorkHours": "07:12",
+            "LateAmmount": "0:14",
+            "year": 2018
+        },
+        {
+            "Date": "6-12",
+            "DayType": "work day",
+            "Attendance": "Presence",
+            "WorkHours": "07:16",
+            "LateAmmount": "0:15",
+            "year": 2018
+        },
+        {
+            "Date": "7-12",
+            "DayType": "work day",
+            "Attendance": "Leave",
+            "WorkHours": "0",
+            "LateAmmount": "",
+            "year": 2018
+        },
+        {
+            "Date": "8-12",
+            "DayType": "rest day",
+            "Attendance": "Leave",
+            "WorkHours": "08:12",
+            "LateAmmount": "0:14",
+            "year": 2018
+        }
+    ]
+}

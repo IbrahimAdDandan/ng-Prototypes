@@ -27,6 +27,10 @@ export class NavbarComponent implements OnInit {
         this.router.navigate(['/login2']);
     }
 
+    attendanceRoute() {
+        this.router.navigate(['/attendance']);
+    }
+
     ngOnInit() {
         this.items = [
             {
@@ -46,7 +50,8 @@ export class NavbarComponent implements OnInit {
                 command: (onclick) => { this.login2Route(); }
             },
             {
-                label: 'Attendence Log'
+                label: 'Attendence Log',
+                command: (onclick) => this.attendanceRoute()
             },
             {
                 label: 'File',
