@@ -29,13 +29,13 @@ export class AttendanceComponent implements OnInit {
   ngOnInit() {
     // this.empAttendService.getData().then(attends => this.attend = attends).catch(err => console.log(err));
     this.empAttendService.getJSON().subscribe(attends => this.attend = attends.data);
-    console.log('data' + this.attend);
     this.Attendance = [
       { label: 'Leave', value: 'Leave' },
       { label: 'Presence', value: 'Presence' }
     ];
 
     this.dayTypes = [
+      { label: 'All types', value: null },
       { label: 'Rest day', value: 'rest day' },
       { label: 'Work day', value: 'work day' }
     ];

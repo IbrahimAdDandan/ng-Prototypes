@@ -19,6 +19,7 @@ import { TableModule } from 'primeng/table';
 import { SliderModule } from 'primeng/slider';
 import { DropdownModule } from 'primeng/dropdown';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { ToolbarModule } from 'primeng/toolbar';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { MultiSelectModule } from 'primeng/multiselect';
     TableModule,
     SliderModule,
     DropdownModule,
-    MultiSelectModule
+    MultiSelectModule,
+    ToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
