@@ -7,6 +7,7 @@ import { Login2Component } from './login2/login2.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'nav', component: NavbarComponent },
   { path: 'login', component: LoginComponent },
   { path: 'login1', component: Login1Component },

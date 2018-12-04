@@ -1,5 +1,35 @@
+<!-- <p-menubar [model]="items">
+</p-menubar> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" [routerLink]="['']">
+        <img src="../../assets/favicon.png" width="40" alt="logo">
+    </a>
+    <p-slideMenu #menu [model]="items" [popup]="true"></p-slideMenu>
+    <button class="navbar-toggler" type="button" #btn (click)="menu.toggle($event)">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<p-menubar [model]="items">
-    <!-- <input type="text" pInputText placeholder="Search">
-    <button pButton label="Logout" icon="fa fa-sign-out"></button> -->
-</p-menubar>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['']">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/login']">Login V1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/login1']">Login V2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/login2']">Login V3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/attendance']">Attendance</a>
+            </li>
+        </ul>
+        <span>Welcome {{username}}</span>
+        <span class="">
+            <a class="nav-link btn" (click)="logout()">Logout</a>
+        </span>
+    </div>
+</nav>

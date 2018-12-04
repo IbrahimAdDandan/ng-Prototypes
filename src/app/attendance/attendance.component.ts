@@ -5,11 +5,13 @@ import { SelectItem } from 'primeng/api';
 @Component({
   selector: 'app-attendance',
   templateUrl: './attendance.component.html',
-  styleUrls: ['./attendance.component.sass']
+  styleUrls: ['./attendance.component.sass',
+  ]
 })
 export class AttendanceComponent implements OnInit {
 
   // constructor() { }
+  username = localStorage.getItem('username') || 'Guest';
 
   attend: EmpAttend[];
 
@@ -46,7 +48,7 @@ export class AttendanceComponent implements OnInit {
       { field: 'DayType', header: 'Day Type' },
       { field: 'Attendance', header: 'Attendance' },
       { field: 'WorkHours', header: 'Work Hours' },
-      { field: 'LateAmmount', header: 'Late Ammount' }
+      { field: 'LateAmmount', header: 'Late Amount' }
     ];
   }
 

@@ -20,6 +20,7 @@ import { SliderModule } from 'primeng/slider';
 import { DropdownModule } from 'primeng/dropdown';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ToolbarModule } from 'primeng/toolbar';
+import { SlideMenuModule } from 'primeng/slidemenu';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ToolbarModule } from 'primeng/toolbar';
     SliderModule,
     DropdownModule,
     MultiSelectModule,
-    ToolbarModule
+    ToolbarModule,
+    SlideMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

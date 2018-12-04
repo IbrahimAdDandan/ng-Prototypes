@@ -1,13 +1,15 @@
-<p-toolbar>
-  <span style='color:#ddd8db'>Welcome Username ot your Attendance Log.</span>
-  <div class="ui-toolbar-group-right">
-    <button pButton type="button" label="Export to Excel" icon="pi pi-download" class="ui-button-success"></button>
+<app-navbar></app-navbar>
+<div style="height: 25px;"></div>
 
+<p-toolbar>
+  <span style='color:#f0e7ec'>Welcome {{username}} ot your Attendance Log.</span>
+  <div class="ui-toolbar-group-right">
+    <button type="button" pButton label="Export Table" (click)="dt.exportCSV()" class="ui-button-raised ui-button-secondary ui-button-rounded"></button>
   </div>
 
-  
+
 </p-toolbar>
-<p-table #dt [columns]="cols" [value]="attend" [style]="{'min-width':'800px'}" [paginator]="true" [rows]="10" sortMode="multiple">
+<p-table #dt [columns]="cols" [value]="attend" [style]="{'min-width':'800px'}" [paginator]="true" [rows]="15" sortMode="multiple">
   <ng-template pTemplate="caption">
     <div style="text-align: left">
       <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
@@ -26,13 +28,14 @@
       <th *ngFor="let col of columns" [ngSwitch]="col.field">
         <input *ngSwitchCase="'Date'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
         <div *ngSwitchCase="'year'">
-          Value < {{yearFilter}} <i class="fa fa-close" (click)="yearFilter=null;dt.filter(null, col.field, col.filterMatchMode)"
+          Value > {{yearFilter}} <i class="fa fa-close" (click)="yearFilter=null;dt.filter(null, col.field, col.filterMatchMode)"
             style="cursor:pointer" *ngIf="yearFilter"></i>
             <p-slider [style]="{'width':'100%','margin-top':'8px'}" [(ngModel)]="yearFilter" [min]="2000" [max]="2020"
               (onChange)="onYearChange($event, dt)"></p-slider>
         </div>
         <p-dropdown *ngSwitchCase="'DayType'" [options]="dayTypes" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value, col.field, 'equals')"></p-dropdown>
-        <p-multiSelect *ngSwitchCase="'Attendance'" [options]="Attendance" defaultLabel="All types" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value, col.field, 'in')"></p-multiSelect>
+        <p-multiSelect *ngSwitchCase="'Attendance'" [options]="Attendance" defaultLabel="All types" [style]="{'width':'100%'}"
+          (onChange)="dt.filter($event.value, col.field, 'in')"></p-multiSelect>
         <input *ngSwitchCase="'WorkHours'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
         <input *ngSwitchCase="'LateAmmount'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
       </th>
